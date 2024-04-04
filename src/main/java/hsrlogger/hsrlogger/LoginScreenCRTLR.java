@@ -22,7 +22,10 @@ public class LoginScreenCRTLR {
     @FXML
     void HandlesClicked(MouseEvent event){
         if(event.getSource() == Login_Button){
-            System.out.println("Button Clicked!");
+            String Username = Login_UIDTF.getText();
+            String Password = Login_PassKeyTF.getText();
+
+            System.out.println("Button Clicked!" + Username + " " + Password);
 
         }
     }
