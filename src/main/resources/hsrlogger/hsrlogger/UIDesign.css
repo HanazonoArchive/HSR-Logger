@@ -1,0 +1,19 @@
+.Login_TextBox {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1f1f1f;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5 5 5 5;
+}
+
+.Login_TextBox:hover {
+    -fx-text-fill: #000000;
+}
+
+.Login_Button {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+}
+
+.Login_Background {
+    -fx-border-color: #030303;
+}
