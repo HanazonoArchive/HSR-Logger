@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Navigation_ANCHRPNE" prefHeight="61.0" prefWidth="1024.0" styleClass="Navigation_Bar" stylesheets="@UIDesignMain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hsrlogger.hsrlogger.MainScreenNavigationCRTLR">
+<AnchorPane fx:id="Navigation_ANCHRPNE" prefHeight="55.0" prefWidth="1024.0" styleClass="Navigation_Bar" stylesheets="@UIDesignMain.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hsrlogger.hsrlogger.MainScreenNavigationCRTLR">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -18,7 +18,7 @@
                   <Image url="@../../Pictures/Hoyoverse_Icon.png" />
                </image>
                <HBox.margin>
-                  <Insets left="10.0" right="5.0" top="5.0" />
+                  <Insets left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </ImageView>
             <HBox fx:id="MainBT_PityCounter" onMouseClicked="#HandleClicks" styleClass="Navigation_Tab">
@@ -34,12 +34,12 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <Label text="Pity Counter">
+                  <Label text="Warp History">
                      <font>
-                        <Font name="Lucida Sans Regular" size="24.0" />
+                        <Font name="Consolas Bold" size="24.0" />
                      </font>
                      <HBox.margin>
-                        <Insets right="5.0" top="8.0" />
+                        <Insets right="5.0" top="9.0" />
                      </HBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -57,7 +57,7 @@
                <children>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../Icons/Team_Icon.png" />
+                        <Image url="@../../Icons/Build.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="5.0" right="5.0" />
@@ -66,12 +66,44 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <Label text="Team Builder">
+                  <Label text="Build Score">
                      <font>
-                        <Font name="Lucida Sans Regular" size="24.0" />
+                        <Font name="Consolas Bold" size="24.0" />
                      </font>
                      <HBox.margin>
-                        <Insets right="5.0" top="8.0" />
+                        <Insets right="5.0" top="9.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox fx:id="MainBT_RelicScore" onMouseClicked="#HandleClicks" styleClass="Navigation_Tab">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Icons/Relic.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label text="Relic Score">
+                     <font>
+                        <Font name="Consolas Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" top="9.0" />
                      </HBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
