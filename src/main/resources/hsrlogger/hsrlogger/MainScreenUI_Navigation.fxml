@@ -60,7 +60,7 @@
                         <Image url="@../../Icons/Build.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0" top="2.0" />
                      </HBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -92,7 +92,7 @@
                         <Image url="@../../Icons/Relic.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" right="5.0" top="2.0" />
                      </HBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
