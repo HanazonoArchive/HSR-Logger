@@ -23,7 +23,6 @@ public class HSRLoggerApplication extends Application {
             LoginStage.getIcons().add(new Image(Objects.requireNonNull(HSRLoggerApplication.class.getResourceAsStream("/Icons/Window_Icon.png"))));
         }
 
-
     }
 
     public static void main(String[] args) {

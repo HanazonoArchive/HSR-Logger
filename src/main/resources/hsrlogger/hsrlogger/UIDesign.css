@@ -1,7 +1,7 @@
 .Login_TextBox {
-    -fx-background-color: #ffffff;
+    -fx-background-color: #78A083;
     -fx-text-fill: #1f1f1f;
-    -fx-border-color: #000000;
+    -fx-border-color: #344955;
     -fx-border-radius: 5 5 5 5;
 }
 
@@ -10,10 +10,19 @@
 }
 
 .Login_Button {
-    -fx-background-color: #ffffff;
+    -fx-background-color: #78A083;
     -fx-background-radius: 10;
 }
 
 .Login_Background {
     -fx-border-color: #030303;
+}
+
+.Background_Colors {
+    -fx-background-color: #414141;
+}
+
+.MineBackground_Colors {
+    -fx-background-color: #50727B;
+    -fx-background-radius: 10;
 }
