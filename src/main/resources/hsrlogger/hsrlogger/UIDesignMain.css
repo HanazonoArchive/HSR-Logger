@@ -1,0 +1,21 @@
+.Navigation_Bar {
+    -fx-background-color: #f4ebeb;
+    -fx-background-radius: 10 10 0 0}
+
+.Main_Screen {
+    -fx-background-color: #c7a9b3;
+    -fx-background-radius: 15;
+}
+
+.Navigation_Tab {
+    -fx-background-color: #f4ebeb;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.Navigation_Tab:hover {
+    -fx-background-color: #c7a9b3;
+}
+
+.Navigation_Tab.clicked {
+    -fx-background-color: #c7a9b3;
+}
