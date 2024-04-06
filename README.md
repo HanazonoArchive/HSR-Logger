@@ -6,8 +6,12 @@ the functions im planning to add and the progress are:
 2. Relic Scorer - Planning
 3. Pity Counter - Undecided but Planning
 
-As of today(April 6, 2024):
+April 6, 2024:
 * Succefully created the build scorer algorithm
+
+April 7 2024:
+* Refine and Modified the Scorer algorithm to support multi-relics
+* Making the GUI for build Scorer with this algorithm
 
 
 credits:
