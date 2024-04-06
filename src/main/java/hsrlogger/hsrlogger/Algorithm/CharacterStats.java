@@ -1,4 +1,4 @@
-package hsrlogger.hsrlogger;
+package hsrlogger.hsrlogger.Algorithm;
 
 import java.util.HashMap;
 import java.util.Map;

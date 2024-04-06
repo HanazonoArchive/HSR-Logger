@@ -13,4 +13,8 @@ module hsrlogger.hsrlogger {
 
     opens hsrlogger.hsrlogger to javafx.fxml;
     exports hsrlogger.hsrlogger;
+    exports hsrlogger.hsrlogger.STATS;
+    opens hsrlogger.hsrlogger.STATS to javafx.fxml;
+    exports hsrlogger.hsrlogger.Algorithm;
+    opens hsrlogger.hsrlogger.Algorithm to javafx.fxml;
 }
