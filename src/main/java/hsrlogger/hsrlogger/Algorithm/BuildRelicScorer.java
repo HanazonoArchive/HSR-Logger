@@ -57,24 +57,8 @@ public class BuildRelicScorer {
         AlgorithmRelic algorithm = new AlgorithmRelic();
 
         // Call CalculateMainStats for each relic
-        RelicSetAndGet relic1 = relics.get(0);
-        RelicSetAndGet relic2 = relics.get(1);
-        RelicSetAndGet relic3 = relics.get(2);
-        RelicSetAndGet relic4 = relics.get(3);
-        RelicSetAndGet relic5 = relics.get(4);
-        RelicSetAndGet relic6 = relics.get(5);
-
-        algorithm.CalculateMainStats(CharacterName, relic1.getName(), relic1.getRarity(), relic1.getLevel(), relic1.getRate());
-        algorithm.CalculateMainStats(CharacterName, relic2.getName(), relic2.getRarity(), relic2.getLevel(), relic2.getRate());
-        algorithm.CalculateMainStats(CharacterName, relic3.getName(), relic3.getRarity(), relic3.getLevel(), relic3.getRate());
-        algorithm.CalculateMainStats(CharacterName, relic4.getName(), relic4.getRarity(), relic4.getLevel(), relic4.getRate());
-        algorithm.CalculateMainStats(CharacterName, relic5.getName(), relic5.getRarity(), relic5.getLevel(), relic5.getRate());
-        algorithm.CalculateMainStats(CharacterName, relic6.getName(), relic6.getRarity(), relic6.getLevel(), relic6.getRate());
-
-        // Call CalculateSubStats with the dynamically created CharacterStats instance for each relic
         for (RelicSetAndGet relic : relics) {
-            algorithm.CalculateSubStats(characterStats, CharacterName, relics);
+            algorithm.CalculateMainStats(CharacterName, relic.getName(), relic.getRarity(), relic.getLevel(), relic.getRate(), relic, characterStats);
         }
-
     }
 }

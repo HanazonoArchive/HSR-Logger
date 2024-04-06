@@ -54,11 +54,11 @@ public class SingleRelicScorer {
         AlgorithmRelic algorithm = new AlgorithmRelic();
 
         // Call CalculateMainStats for each relic
-        for (RelicSetAndGet relic : relics) {
-            algorithm.CalculateMainStats(CharacterName, relic.getName(), relic.getRarity(), relic.getLevel(), relic.getRate());
-        }
+        //for (RelicSetAndGet relic : relics) {
+        //    algorithm.CalculateMainStats(CharacterName, relic.getName(), relic.getRarity(), relic.getLevel(), relic.getRate());
+        //}
 
         // Call CalculateSubStats with the dynamically created CharacterStats instance
-        algorithm.CalculateSubStats(characterStats, CharacterName, relics);
+        //algorithm.CalculateSubStats(characterStats, CharacterName, relics);
     }
 }

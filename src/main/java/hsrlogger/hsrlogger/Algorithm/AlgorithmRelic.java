@@ -5,6 +5,8 @@ import hsrlogger.hsrlogger.STATS.*;
 import java.util.List;
 
 public class AlgorithmRelic {
+    private double MainStatScore;
+    private double SubStatScore;
     public double TotalScore;
     public String ScoreRank;
 
@@ -29,8 +31,7 @@ public class AlgorithmRelic {
         FuxuanStats = new FuxuanSTATS(); // Initialize FuxuanStats instance
     }
 
-    public void CalculateMainStats(String characterName, String relicName, double relicRarity, double relicLevel, double relicRate) {
-        double mainStatScore = 0;
+    public void CalculateMainStats(String characterName, String relicName, double relicRarity, double relicLevel, double relicRate, RelicSetAndGet relic, CharacterStats characterStats) {
         double effectivetoCharacter = 12.0;
         double ineffectiveCharacter = 7.5;
         double relicScore = relicRate * relicRarity * relicLevel;
@@ -41,14 +42,19 @@ public class AlgorithmRelic {
 
         if (isMaxLevel) {
             if (isEffective) {
-                mainStatScore = effectivetoCharacter;
+                MainStatScore = effectivetoCharacter;
             } else {
-                mainStatScore = ineffectiveCharacter;
+                MainStatScore = ineffectiveCharacter;
             }
         } else {
-            mainStatScore = relicScore;
+            MainStatScore = relicScore;
         }
-        System.out.println("Main Stats: " + relicName + " | Score: " + String.format("%.2f", mainStatScore));
+        System.out.println(" ");
+        System.out.println("Character: " + characterName.toUpperCase());
+        System.out.println(" ");
+
+        System.out.println("Main Stats: " + relicName + " | Score: " + String.format("%.2f", MainStatScore));
+        CalculateSubStats(characterStats, relic);
     }
 
     private boolean isEffectiveForCharacter(String relicName, String characterName) {
@@ -75,47 +81,38 @@ public class AlgorithmRelic {
         return statement;
     }
 
-    public void CalculateSubStats(CharacterStats characterStats, String characterName, List<RelicSetAndGet> relics) {
-        double totalSubStatScore = 0;
+    public void CalculateSubStats(CharacterStats characterStats, RelicSetAndGet relic) {
+        // Reset the total and sub-stat scores to zero for each relic calculation
+        TotalScore = 0;
+        SubStatScore = 0;
 
-        for (RelicSetAndGet relic : relics) {
-            double subStat1Rate = characterStats.getStatRate(relic.getSubStat1Name());
-            double subStat1Score = relic.getSubStat1Value() * subStat1Rate;
+        double subStat1Rate = characterStats.getStatRate(relic.getSubStat1Name());
+        double subStat1Score = relic.getSubStat1Value() * subStat1Rate;
 
-            double subStat2Rate = characterStats.getStatRate(relic.getSubStat2Name());
-            double subStat2Score = relic.getSubStat2Value() * subStat2Rate;
+        double subStat2Rate = characterStats.getStatRate(relic.getSubStat2Name());
+        double subStat2Score = relic.getSubStat2Value() * subStat2Rate;
 
-            double subStat3Rate = characterStats.getStatRate(relic.getSubStat3Name());
-            double subStat3Score = relic.getSubStat3Value() * subStat3Rate;
+        double subStat3Rate = characterStats.getStatRate(relic.getSubStat3Name());
+        double subStat3Score = relic.getSubStat3Value() * subStat3Rate;
 
-            double subStat4Rate = characterStats.getStatRate(relic.getSubStat4Name());
-            double subStat4Score = relic.getSubStat4Value() * subStat4Rate;
+        double subStat4Rate = characterStats.getStatRate(relic.getSubStat4Name());
+        double subStat4Score = relic.getSubStat4Value() * subStat4Rate;
 
-            System.out.println("Main Stats: " + relic.getName()); // Print main stats
-            System.out.println("Sub Stats: " + relic.getSubStat1Name() + " | Score: " + String.format("%.2f", subStat1Score));
-            System.out.println("Sub Stats: " + relic.getSubStat2Name() + " | Score: " + String.format("%.2f", subStat2Score));
-            System.out.println("Sub Stats: " + relic.getSubStat3Name() + " | Score: " + String.format("%.2f", subStat3Score));
-            System.out.println("Sub Stats: " + relic.getSubStat4Name() + " | Score: " + String.format("%.2f", subStat4Score));
+        System.out.println("Sub Stats: " + relic.getSubStat1Name() + " | Score: " + String.format("%.2f", subStat1Score));
+        System.out.println("Sub Stats: " + relic.getSubStat2Name() + " | Score: " + String.format("%.2f", subStat2Score));
+        System.out.println("Sub Stats: " + relic.getSubStat3Name() + " | Score: " + String.format("%.2f", subStat3Score));
+        System.out.println("Sub Stats: " + relic.getSubStat4Name() + " | Score: " + String.format("%.2f", subStat4Score));
 
-            CalculateMainStats(characterName, relic.getName(), relic.getRarity(), relic.getLevel(), relic.getRate()); // Corrected call
+        SubStatScore += subStat1Score;
+        SubStatScore += subStat2Score;
+        SubStatScore += subStat3Score;
+        SubStatScore += subStat4Score;
 
-            totalSubStatScore += subStat1Score;
-            totalSubStatScore += subStat2Score;
-            totalSubStatScore += subStat3Score;
-            totalSubStatScore += subStat4Score;
+        TotalScore = MainStatScore + SubStatScore;
 
-            TotalScore = TotalScore + totalSubStatScore;
-
-            Overall();
-            System.out.println("Total Score: " + String.format("%.2f", TotalScore));
-            System.out.println(" ");
-
-            TotalScore = 0;
-        }
-
-        System.out.println("Character: " + characterName.toUpperCase());
+        Overall();
+        System.out.println("Total Score: " + String.format("%.2f", TotalScore));
     }
-
 
     public void Overall() {
         if (TotalScore >= 52) {
@@ -133,7 +130,6 @@ public class AlgorithmRelic {
         } else if (TotalScore < 15) {
             ScoreRank = "E";
         }
-
         System.out.println("Score Rank: " + ScoreRank);
     }
 }
