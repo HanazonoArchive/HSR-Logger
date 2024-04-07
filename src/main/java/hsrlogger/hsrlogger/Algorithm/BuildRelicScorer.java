@@ -6,7 +6,7 @@ import java.util.List;
 import hsrlogger.hsrlogger.STATS.*;
 
 public class BuildRelicScorer {
-    public static void main(String[] args) {
+    public void BuildRelicScorer() {
 
         // Character Name
         String CharacterName = "Kafka";

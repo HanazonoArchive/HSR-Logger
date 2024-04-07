@@ -230,6 +230,7 @@ public class MainScreenTeamBuildingCRTLR {
     @FXML
     private HBox BuildScoreSubmitBT;
     public void initialize(){
+
         // Initialize characterName ComboBox
         ObservableList<String> characterNames = FXCollections.observableArrayList("Kafka", "Acheron", "FuXuan", "Huohuo", "Seele", "SilverWolf", "Sparkle", "TopazNumby");
         characterName.setItems(characterNames);
@@ -305,7 +306,25 @@ public class MainScreenTeamBuildingCRTLR {
     void HandleClicks(MouseEvent event) {
         if (event.getSource() == BuildScoreSubmitBT) {
             try {
+                // Character Name
                 String SelectedCharacter = characterName.getValue();
+
+                // Instance of Grade and Score
+                String helmetGrade = null;
+                String glovesGrade = null;
+                String bodyGrade = null;
+                String feetGrade = null;
+                String sphereGrade = null;
+                String ropeGrade = null;
+
+                double helmetScore = 0;
+                double gloveScore = 0;
+                double bodyScore = 0;
+                double feetScore = 0;
+                double sphereScore = 0;
+                double ropeScore = 0;
+
+
                 //Helmet
                 //Main Stat
                 String helmet_SelectedMainStat = helmet_MainStatName.getValue();
@@ -402,7 +421,24 @@ public class MainScreenTeamBuildingCRTLR {
                 String rope_SelectedSubStat4 = rope_SubStatName4.getValue();
                 double rope_SelectedSubValue4 = Double.parseDouble(rope_SubStatValue4.getText());
 
-                BuildRelicScorer relicScorer = new BuildRelicScorer();
+                //Grade and Score
+                helmet_GradeLBL.setText(helmetGrade);
+                helmet_ScoreLBL.setText(String.valueOf(helmetScore));
+
+                glove_GradeLBL.setText(glovesGrade);
+                glove_ScoreLBL.setText(String.valueOf(gloveScore));
+
+                body_GradeLBL.setText(bodyGrade);
+                body_ScoreLBL.setText(String.valueOf(bodyScore));
+
+                feet_GradeLBL.setText(feetGrade);
+                feet_ScoreLBL.setText(String.valueOf(feetScore));
+
+                sphere_GradeLBL.setText(sphereGrade);
+                sphere_ScoreLBL.setText(String.valueOf(sphereScore));
+
+                rope_GradeLBL.setText(ropeGrade);
+                rope_ScoreLBL.setText(String.valueOf(ropeScore));
             } catch (Exception e) {
                 e.printStackTrace();
             }
