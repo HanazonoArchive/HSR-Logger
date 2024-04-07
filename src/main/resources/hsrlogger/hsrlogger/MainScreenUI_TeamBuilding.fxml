@@ -1,13 +1,1021 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Main_ANCHRPNE" prefHeight="531.0" prefWidth="1024.0" style="-fx-background-color: transparent;" stylesheets="@UIDesignMain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hsrlogger.hsrlogger.MainScreenTeamBuildingCRTLR">
+<AnchorPane fx:id="Main_ANCHRPNE" prefHeight="531.0" prefWidth="1024.0" style="-fx-background-color: transparent;" stylesheets="@UIDesignMain.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hsrlogger.hsrlogger.MainScreenTeamBuildingCRTLR">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="Main_Screen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text layoutX="233.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is it Working!" wrappingWidth="76.107421875" />
+            <VBox layoutX="24.0" layoutY="23.0" prefHeight="200.0" prefWidth="100.0" styleClass="Panel_Main" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <ComboBox fx:id="characterName" prefHeight="45.0" prefWidth="295.0" styleClass="Panel_Main_DropBox">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ImageView fitHeight="350.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox prefHeight="31.0" prefWidth="305.0" styleClass="Panel_Main_DropBox2">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="157.0">
+                           <children>
+                              <Label layoutX="4.0" layoutY="2.0" text="Score Sum." AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="106.0" layoutY="2.0" text="000.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="99.0">
+                           <children>
+                              <Label layoutX="9.0" layoutY="2.0" prefHeight="28.0" prefWidth="50.0" text="Grade" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="78.0" layoutY="2.0" text="E" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="BuildScoreSubmitBT" alignment="CENTER" onMouseClicked="#HandleClicks" prefHeight="40.0" prefWidth="301.0" styleClass="Panel_Main_SubmitBT">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../Icons/Submit_Icon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="Submit">
+                           <font>
+                              <Font name="Consolas Bold" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="337.0" layoutY="20.0" prefHeight="240.0" prefWidth="216.0" styleClass="Panel_Main" AnchorPane.topAnchor="20.0">
+               <children>
+                  <HBox prefHeight="79.0" prefWidth="216.0">
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefWidth="216.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Panel_Main_DropBox2">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../Icons/Helmet_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Helmet">
+                                       <font>
+                                          <Font name="Consolas Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="helmet_MainStatName" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="helmet_MainStatValue" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="helmet_Rarity" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="helmet_Level" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="216.0" styleClass="Panel_Main_DropBox2">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" text="Score" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="helmet_ScoreLBL" layoutX="54.0" layoutY="2.0" text="00.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="99.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" prefHeight="28.0" prefWidth="50.0" text="Grade" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="helmet_GradeLBL" layoutX="70.0" layoutY="2.0" text="E" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="helmet_SubStatName1" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="helmet_SubStatValue1" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="helmet_SubStatName2" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="helmet_SubStatValue2" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="helmet_SubStatName3" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="helmet_SubStatValue3" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="helmet_SubStatName4" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="helmet_SubStatValue4" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="563.0" layoutY="20.0" prefHeight="240.0" prefWidth="216.0" styleClass="Panel_Main" AnchorPane.topAnchor="20.0">
+               <children>
+                  <HBox prefHeight="79.0" prefWidth="216.0">
+                     <children>
+                        <VBox prefWidth="216.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Panel_Main_DropBox2">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../Icons/Glove_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Glove">
+                                       <font>
+                                          <Font name="Consolas Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="glove_MainStatName" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="glove_MainStatValue" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="glove_Rarity" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="glove_Level" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="216.0" styleClass="Panel_Main_DropBox2">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" text="Score" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="glove_ScoreLBL" layoutX="54.0" layoutY="2.0" text="00.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="99.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" prefHeight="28.0" prefWidth="50.0" text="Grade" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="glove_GradeLBL" layoutX="70.0" layoutY="2.0" text="E" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="glove_SubStatName1" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="glove_SubStatValue1" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="glove_SubStatName2" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="glove_SubStatValue2" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="glove_SubStatName3" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="glove_SubStatValue3" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="glove_SubStatName4" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="glove_SubStatValue4" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children></VBox>
+            <VBox layoutX="785.0" layoutY="20.0" prefHeight="240.0" prefWidth="216.0" styleClass="Panel_Main" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <HBox prefHeight="79.0" prefWidth="216.0">
+                     <children>
+                        <VBox prefWidth="216.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Panel_Main_DropBox2">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../Icons/Sphere_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Planar Sphere">
+                                       <font>
+                                          <Font name="Consolas Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="sphere_MainStatName" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="sphere_MainStatValue" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="sphere_Rarity" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="sphere_Level" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="216.0" styleClass="Panel_Main_DropBox2">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" text="Score" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sphere_ScoreLBL" layoutX="54.0" layoutY="2.0" text="00.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="99.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" prefHeight="28.0" prefWidth="50.0" text="Grade" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sphere_GradeLBL" layoutX="70.0" layoutY="2.0" text="E" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="sphere_SubStatName1" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="sphere_SubStatValue1" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="sphere_SubStatName2" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="sphere_SubStatValue2" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="sphere_SubStatName3" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="sphere_SubStatValue3" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="sphere_SubStatName4" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="sphere_SubStatValue4" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children></VBox>
+            <VBox layoutX="337.0" layoutY="271.0" prefHeight="240.0" prefWidth="216.0" styleClass="Panel_Main" AnchorPane.bottomAnchor="20.0">
+               <children>
+                  <HBox prefHeight="79.0" prefWidth="216.0">
+                     <children>
+                        <VBox prefWidth="216.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Panel_Main_DropBox2">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../Icons/Body_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Body">
+                                       <font>
+                                          <Font name="Consolas Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="body_MainStatName" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="body_MainStatValue" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="body_Rarity" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="body_Level" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="216.0" styleClass="Panel_Main_DropBox2">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" text="Score" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="body_ScoreLBL" layoutX="54.0" layoutY="2.0" text="00.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="99.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" prefHeight="28.0" prefWidth="50.0" text="Grade" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="body_GradeLBL" layoutX="70.0" layoutY="2.0" text="E" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="body_SubStatName1" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="body_SubStatValue1" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="body_SubStatName2" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="body_SubStatValue2" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="body_SubStatName3" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="body_SubStatValue3" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="body_SubStatName4" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="body_SubStatValue4" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children></VBox>
+            <VBox layoutX="563.0" layoutY="272.0" prefHeight="240.0" prefWidth="216.0" styleClass="Panel_Main" AnchorPane.bottomAnchor="20.0">
+               <children>
+                  <HBox prefHeight="79.0" prefWidth="216.0">
+                     <children>
+                        <VBox prefWidth="216.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Panel_Main_DropBox2">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../Icons/Feet_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Feet">
+                                       <font>
+                                          <Font name="Consolas Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="feet_MainStatName" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="feet_MainStatValue" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="feet_Rarity" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="feet_Level" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="216.0" styleClass="Panel_Main_DropBox2">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" text="Score" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="feet_ScoreLBL" layoutX="54.0" layoutY="2.0" text="00.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="99.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" prefHeight="28.0" prefWidth="50.0" text="Grade" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="feet_GradeLBL" layoutX="70.0" layoutY="2.0" text="E" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="feet_SubStatName1" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="feet_SubStatValue1" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="feet_SubStatName2" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="feet_SubStatValue2" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="feet_SubStatName3" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="feet_SubStatValue3" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="feet_SubStatName4" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="feet_SubStatValue4" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children></VBox>
+            <VBox layoutX="790.0" layoutY="30.0" prefHeight="240.0" prefWidth="216.0" styleClass="Panel_Main" AnchorPane.bottomAnchor="20.0">
+               <children>
+                  <HBox prefHeight="79.0" prefWidth="216.0">
+                     <children>
+                        <VBox prefWidth="216.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Panel_Main_DropBox2">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../Icons/Rope_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Link Rope">
+                                       <font>
+                                          <Font name="Consolas Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="rope_MainStatName" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="rope_MainStatValue" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="216.0">
+                                 <children>
+                                    <ComboBox fx:id="rope_Rarity" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField fx:id="rope_Level" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="216.0" styleClass="Panel_Main_DropBox2">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" text="Score" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rope_ScoreLBL" layoutX="54.0" layoutY="2.0" text="00.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="99.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="2.0" prefHeight="28.0" prefWidth="50.0" text="Grade" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rope_GradeLBL" layoutX="70.0" layoutY="2.0" text="E" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <font>
+                                    <Font name="Consolas Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="rope_SubStatName1" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="rope_SubStatValue1" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="rope_SubStatName2" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="rope_SubStatValue2" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="rope_SubStatName3" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="rope_SubStatValue3" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="216.0">
+                     <children>
+                        <ComboBox fx:id="rope_SubStatName4" prefHeight="25.0" prefWidth="115.0" styleClass="Panel_Main_DropBox1">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="rope_SubStatValue4" prefHeight="25.0" prefWidth="97.0" promptText="0.0" styleClass="Panel_Main_TextBox">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children></VBox>
          </children>
       </AnchorPane>
    </children>

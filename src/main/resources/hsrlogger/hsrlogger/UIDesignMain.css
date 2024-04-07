@@ -19,3 +19,29 @@
 .Navigation_Tab.clicked {
     -fx-background-color: #c7a9b3;
 }
+
+.Panel_Main {
+    -fx-background-color: #f4ebeb;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.Panel_Main_DropBox {
+    -fx-background-color: #d3cccc;
+}
+
+.Panel_Main_DropBox1 {
+    -fx-background-color: #d5c7c7;
+}
+.Panel_Main_SubmitBT {
+    -fx-background-color: #d5c7c7;
+    -fx-background-radius: 10 10 10 10;
+}
+.Panel_Main_DropBox2 {
+    -fx-background-color: #d5c7c7;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.Panel_Main_TextBox {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c7a9b3;
+}
